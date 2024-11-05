@@ -1,0 +1,326 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hamza - Portfolio</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Inter", sans-serif;
+      }
+
+      .link-cont {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 12px;
+      }
+
+      .img-section {
+        width: 26rem;
+        height: 260px;
+        display: flex;
+        justify-content: end;
+      }
+
+      .img-section img {
+        background-color: #b3b0a8;
+        animation: morph 8s ease-in-out infinite;
+        object-fit: cover;
+        object-position: right;
+        border: 3px solid #2d2e32;
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        position: relative;
+        transition: all 1s ease-in-out;
+        height: 100%;
+      }
+
+      @keyframes morph {
+        0% {
+          border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        }
+
+        50% {
+          border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+        }
+        100% {
+          border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        }
+      }
+
+      .nav-link {
+        color: gray;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        transition: all 0.3s ease-in-out;
+      }
+
+      /* .imp {
+            color: #0E6BA8;
+        } */
+
+      .nav-link i {
+        font-size: 1.5rem;
+        padding: 4px;
+      }
+
+      .nav-link:hover {
+        color: #007991;
+      }
+
+      .nav-link:hover i {
+        background-color: rgba(170, 170, 170, 0.664);
+        border-radius: 50%;
+      }
+
+      .cont {
+        padding: 1rem 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        border-bottom: 2px solid black;
+      }
+
+      .line {
+        position: relative;
+      }
+
+      .line::after {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 100%;
+        right: -10px;
+        top: 0;
+        background-color: #2f3061;
+      }
+
+      .li-item {
+        padding-left: 1rem;
+        position: relative;
+      }
+
+      .li-item::before {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 100%;
+        left: 0px;
+        top: 0;
+        background-color: #007991;
+        border-radius: 4px;
+      }
+
+      .dates {
+        font-style: italic;
+      }
+
+      .skills {
+        margin: auto;
+        max-width: 50rem;
+        margin-top: 10rem;
+        margin-bottom: 15rem;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 2rem;
+      }
+
+      .skill-icon {
+        margin-right: 0.5rem;
+        height: 3rem;
+        transition: all 0.3s ease-in-out;
+        width: 3rem;
+      }
+
+      #hero-section {
+        flex-direction: row-reverse;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 10px;
+        border: 1px solid #ccc;
+        text-align: left;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+
+      .footer {
+        border-bottom: 0;
+      }
+
+      .footer p {
+        text-align: center;
+        font-weight: 500;
+      }
+    </style>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body style="max-width: 768px; margin: 0 auto">
+    <div class="cont" id="hero-section">
+      <div class="img-section center">
+        <img
+          src="https://hamzaraheem06.github.io/hamza.dev/Portfolio_Picture-removebg%20(1).png"
+          alt="hero-image"
+        />
+      </div>
+      <div class="link-cont">
+        <h1 class="imp">Hamza Raheem</h1>
+        <div class="link-cont">
+          <a class="nav-link" href="hraheem.bsds24seecs@seecs" target="_blank"
+            ><i class="bx bxl-gmail"></i>
+            <p>hamzaraheem06@gmail.com</p>
+          </a>
+          <a class="nav-link" href="tel:+4733378901"
+            ><i class="bx bxs-phone"></i>
+            <p>+92336 1520834</p></a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="cont">
+      <h2>Objective</h2>
+      <p>
+        A highly motivated and detail-oriented software engineer seeking to use
+        my expertise in software development and computer programming to provide
+        innovative solutions.
+      </p>
+    </div>
+
+    <div class="cont">
+      <h2>Educational Background</h2>
+      <div>
+        <h3 class="li-item">Bachelor of Science in Data Science</h3>
+        <div style="display: flex; gap: 20px">
+          <p class="line">
+            National University of Science and Technology (NUST)
+          </p>
+          <p class="dates">2024 - Present</p>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="li-item">High School</h3>
+        <div style="display: flex; gap: 20px">
+          <p class="line">Islamabad Model School for Boys F-7/3 (IMCB)</p>
+          <p class="dates">2022 - 2024</p>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="li-item">Matriculation</h3>
+        <div style="display: flex; gap: 20px">
+          <p class="line">Islamabad Model School for Boys F-7/3 (IMCB)</p>
+          <p class="dates">2020 - 2022</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cont">
+      <h2>Work Experience</h2>
+      <div>
+        <h3 class="li-item">Front-End Developer</h3>
+        <div style="display: flex; gap: 20px">
+          <p class="line">Freelance</p>
+          <p class="dates">2024 - Present</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cont">
+      <h1>Tech Stack</h1>
+      <div class="skill-icons">
+        <img
+          src="https://github.com/tandpfun/skill-icons/raw/main/icons/HTML.svg"
+          alt="html"
+          class="skill-icon"
+        />
+
+        <img
+          src="https://github.com/tandpfun/skill-icons/raw/main/icons/CSS.svg"
+          alt="css"
+          class="skill-icon"
+        />
+
+        <img
+          src="https://github.com/tandpfun/skill-icons/raw/main/icons/TailwindCSS-Dark.svg"
+          alt="Tailwind CSS"
+          class="skill-icon"
+        />
+
+        <img
+          src="https://github.com/tandpfun/skill-icons/raw/main/icons/JavaScript.svg"
+          alt="Javascript"
+          class="skill-icon"
+        />
+
+        <img
+          src="https://github.com/tandpfun/skill-icons/raw/main/icons/React-Dark.svg"
+          alt="React.js"
+          class="skill-icon"
+        />
+      </div>
+    </div>
+
+    <div class="cont">
+      <table>
+        <tr>
+          <th>Activity</th>
+          <th>Role</th>
+          <th>Duration</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>Debate Club</td>
+          <td>Member</td>
+          <td>2 years</td>
+          <td>
+            Participated in weekly debates and represented the school in
+            competitions.
+          </td>
+        </tr>
+        <tr>
+          <td>Basketball Team</td>
+          <td>Captain</td>
+          <td>3 years</td>
+          <td>
+            Led the team to regional championships and organized practice
+            sessions.
+          </td>
+        </tr>
+        <tr>
+          <td>Community Service</td>
+          <td>Volunteer</td>
+          <td>1 year</td>
+          <td>Organized food drives and assisted in local community events.</td>
+        </tr>
+        <tr>
+          <td>Science Club</td>
+          <td>President</td>
+          <td>1 year</td>
+          <td>Led science workshops and coordinated an annual science fair.</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="cont footer">
+      <p>Copyright Claim &copy; All rights are reserverd</p>
+    </div>
+  </body>
+</html>
