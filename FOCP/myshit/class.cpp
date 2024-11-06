@@ -2,9 +2,20 @@
 
 using namespace std;
 
-int main()
-{
-    int shhhhhhhh = 0;
-    cout << shhhhhhhh;
+class ParentClass {
+protected:
+    void sayParent() {
+        cout << "I am parent class.";
+    }
+};
+
+class ChildrenClass : ParentClass {
+
+};
+
+int main() {
+    ChildrenClass o1;
+    o1.sayParent();
+
     return 0;
 }

@@ -1,0 +1,68 @@
+#include<iostream>
+
+using namespace std;
+
+// ************************** to check for leap year or not **************************
+
+/// @brief Checks if the passed year is a leap year or not
+/// @param year 
+/// @return returns true ( 1 ) if the year is leap, and false ( 0 ) if it is not.
+bool isLeap(unsigned int year) {
+    if (year % 4 != 0) // if the year is not divisible by 4, there is no point for further checking so we return false.
+        return false;
+
+    // handling the exceptional cases.
+    // if the year is divisible by 4, but also divisible by 100 then it is not a leap year. 
+    if (year % 100 != 0)
+        return true;
+
+    // if the upper condtion gets false i.e. The year is divisible by 100, we check if the year is divisible by 400, if it is not, we return false.
+    if (year % 400 != 0)
+        return false;
+
+    return true; // if the special cases are not concerning we return true on the basis of first condition
+}
+
+// ************************** to reverse a number **************************
+
+/// @brief Inputs a number and returns after reversing it.
+/// @param num 
+/// @return returns the reversed form of the number passed to it.
+int reverseNumber(unsigned int num) {
+    int remainder, reversedNumber = 0;
+    do {
+        remainder = num % 10; // this gets the last integer in the number, and stores it in remainder
+        reversedNumber = (reversedNumber * 10) + remainder; // this stores this remainder and add them in proper reverse order. 
+        // lets understand the upper line with example. 
+        //If the user enters 1234 as num, remainder statement will return the last integer i.e. 4. Since we initialized reversedNumber as 0, ( 0 * 10 ) + 4 = 4 will be stored in reversedNumber. 
+        // On second iteration, the num is now 123, we get remainder = 3 this time.
+        // reversedNumber = (4 * 10 ) + 3 = 43
+        // On third iteration, the num is 12, we get remainder =  2.
+        // reversedNumber = (43 * 10 ) + 2 = 432
+        // On fourth iteration, the num is 1, and we get remainder = 1
+        // reversedNumber = (432 * 10 ) + 1 = 4321
+
+        // after this the num becomes zero due to division by 10. And the loop terminate as we mentioned in condition
+        num /= 10; // this removes the last integer after seperating it.
+    } while (num != 0);
+    return reversedNumber; // returning the reversedNumber for displaying
+}
+
+// ************************** Finding the LCM **************************
+
+/// @brief Gives the Least Common Multiple of two numbers passed to it.
+/// @param num1 
+/// @param num2 
+/// @return returns the LCM of two numbers passed to it.
+int leastCommonMultiple(int num1, int num2) {
+    int largestOfTwo = (num1 > num2) ? num1 : num2; // the LCM cannot be less the largest among the numbers.
+    // LCM can be: 
+    // 1. The largest number itself, therefore, initializing the i with largestOfTwo
+    // 2. The product of the numbers, therefore, including the product of the numbers in the sentinal value
+    // 3. The numbers between the initialzing and sentinal value.
+    for (int i = largestOfTwo; i <= num1 * num2; i++)
+        if ((i % num1 == 0) && (i % num2 == 0)) // if the i ( possible LCM ) gets divisible by both numbers, it is the LCM so we return it.
+            return i;
+
+    return 0; // returning 0 for any miscalculation
+}
